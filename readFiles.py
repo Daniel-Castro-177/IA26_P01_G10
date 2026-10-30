@@ -13,3 +13,9 @@ tiny_data = {
     file.stem: pd.read_csv(file)
     for file in tiny_dir.glob("*.csv")
 }
+
+print("Ficheiros disponíveis em tiny_data:")
+print(list(tiny_data.keys()))
+
+print("\nVisualização da tabela de encomendas:")
+print(tiny_data["orders"].head())
